@@ -1,8 +1,20 @@
 # 🚀 Crypto Research AI with ROMA Framework
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Active-brightgreen?style=for-the-badge)](https://airesearch-tools.vercel.app)
+[![Backend](https://img.shields.io/badge/Backend-Railway-blue?style=for-the-badge)](https://railway.app)
+[![Framework](https://img.shields.io/badge/Framework-ROMA-purple?style=for-the-badge)](https://github.com/ntclick/ai-research-roma)
+
 **👨‍💻 Author:** [@trungkts29](https://x.com/trungkts29)
 
 An advanced cryptocurrency research assistant powered by the ROMA (Recursive Open Meta-Agent) Framework. Combines multiple AI models and data sources to provide comprehensive crypto market analysis, real-time price tracking, news aggregation, and AI-powered image generation.
+
+## 🌐 Live Demo
+
+**Try it now:** https://airesearch-tools.vercel.app
+
+**Backend API:** wss://web-production-6b11c.up.railway.app
+
+**Status:** ✅ **LIVE & OPERATIONAL**
 
 ---
 

@@ -7,7 +7,7 @@
 ## 🌐 Live URLs
 
 ### **Frontend (Vercel)**
-- **Production:** https://frontend-74isd11ge-trungkts-projects.vercel.app
+- **Production:** https://airesearch-tools.vercel.app
 - **Dashboard:** https://vercel.com/trungkts-projects/frontend
 - **Region:** Global CDN
 - **Framework:** React (Create React App)
@@ -42,7 +42,7 @@
 
 ## 🧪 Test Commands
 
-Open: https://frontend-74isd11ge-trungkts-projects.vercel.app
+Open: https://airesearch-tools.vercel.app
 
 Try these queries:
 

@@ -219,7 +219,7 @@ Vercel Dashboard → Deployments → Click latest → Logs
 
 ### **Test via Browser Console**
 
-1. Open: https://frontend-74isd11ge-trungkts-projects.vercel.app
+1. Open: https://airesearch-tools.vercel.app
 2. Open DevTools (F12)
 3. Console tab
 
@@ -305,7 +305,7 @@ Railway Dashboard → Deployments → Deploy Logs → Copy all
 
 **Vercel:**
 ```bash
-vercel logs https://frontend-74isd11ge-trungkts-projects.vercel.app
+vercel logs https://airesearch-tools.vercel.app
 ```
 
 ### **Debug Mode**
@@ -337,7 +337,7 @@ Your deployment is successful if:
 **🎉 Current Status: ALL TESTS PASSING!**
 
 **Live URLs:**
-- Frontend: https://frontend-74isd11ge-trungkts-projects.vercel.app
+- Frontend: https://airesearch-tools.vercel.app
 - Backend: wss://web-production-6b11c.up.railway.app
 
 Made with ❤️ by [@trungkts29](https://x.com/trungkts29)
