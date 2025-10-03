@@ -20,9 +20,15 @@ An advanced cryptocurrency research assistant powered by the ROMA (Recursive Ope
 
 Watch the full demo and tutorial:
 
-[![Demo Video](https://img.youtube.com/vi/3Oihz5XFWpw/maxresdefault.jpg)](https://youtu.be/3Oihz5XFWpw)
-
-**[▶️ Watch on YouTube](https://youtu.be/3Oihz5XFWpw)**
+<div align="center">
+  <a href="https://youtu.be/3Oihz5XFWpw">
+    <img src="https://img.youtube.com/vi/3Oihz5XFWpw/maxresdefault.jpg" alt="Demo Video" style="width:100%;max-width:800px;">
+  </a>
+  <br>
+  <a href="https://youtu.be/3Oihz5XFWpw">
+    <img src="https://img.shields.io/badge/▶️_Watch_on_YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch on YouTube">
+  </a>
+</div>
 
 ---
 

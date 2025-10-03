@@ -45,20 +45,37 @@ function App() {
                             </VStack>
                         </Box>
 
-                        <Box p={4} bg="red.50" borderRadius="md" w="100%" maxW="1200px" textAlign="center">
-                            <Text fontWeight="bold" mb={2} fontSize="lg">
+                        <Box p={6} bg="gray.100" borderRadius="md" w="100%" maxW="1200px">
+                            <Text fontWeight="bold" mb={4} fontSize="xl" textAlign="center">
                                 🎥 Demo Video
                             </Text>
-                            <Link 
-                                href="https://youtu.be/3Oihz5XFWpw" 
-                                isExternal 
-                                color="red.600"
-                                fontWeight="semibold"
-                                _hover={{ color: 'red.700', textDecoration: 'underline' }}
+                            <Box
+                                position="relative"
+                                paddingBottom="56.25%" // 16:9 aspect ratio
+                                height="0"
+                                overflow="hidden"
+                                borderRadius="lg"
+                                boxShadow="xl"
                             >
-                                <Icon as={FaYoutube} mr={2} boxSize={5} />
-                                Watch Full Demo & Tutorial on YouTube
-                            </Link>
+                                <iframe
+                                    style={{
+                                        position: 'absolute',
+                                        top: 0,
+                                        left: 0,
+                                        width: '100%',
+                                        height: '100%',
+                                        border: 0
+                                    }}
+                                    src="https://www.youtube.com/embed/3Oihz5XFWpw"
+                                    title="Demo Video"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            </Box>
+                            <Text textAlign="center" mt={3} fontSize="sm" color="gray.600">
+                                <Icon as={FaYoutube} mr={1} color="red.500" />
+                                Full Demo & Tutorial
+                            </Text>
                         </Box>
                     </VStack>
                 </Container>
