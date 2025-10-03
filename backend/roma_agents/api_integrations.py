@@ -16,6 +16,11 @@ class APIIntegrations:
         self.fal_api_key = os.getenv('FAL_API_KEY')
         self.gemini_api_key = os.getenv('GOOGLE_API_KEY')  # Railway uses GOOGLE_API_KEY
         
+        # Debug: Check if keys are loaded
+        print("[DEBUG] API Keys Status:")
+        print(f"  GOOGLE_API_KEY: {'Loaded (' + self.gemini_api_key[:20] + '...)' if self.gemini_api_key else 'NOT FOUND'}")
+        print(f"  OPENAI_API_KEY: {'Loaded' if self.openai_api_key else 'NOT FOUND'}")
+        
         print("============================================================")
         print("[ROMA Framework - AI Architecture]")
         print(f"  🧠 Brain (Routing & Interaction): OpenAI GPT-4o-mini {'✓' if self.openai_api_key else '✗'}")
