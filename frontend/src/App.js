@@ -6,8 +6,11 @@ import {
     Text,
     VStack,
     Alert,
-    AlertIcon
+    AlertIcon,
+    Link,
+    Icon
 } from '@chakra-ui/react';
+import { FaYoutube } from 'react-icons/fa';
 import InteractiveChat from './components/InteractiveChat';
 
 function App() {
@@ -40,6 +43,22 @@ function App() {
                                 <Text>• "bitcoin news" - Latest crypto news</Text>
                                 <Text>• "create image bitcoin logo" - AI image generation</Text>
                             </VStack>
+                        </Box>
+
+                        <Box p={4} bg="red.50" borderRadius="md" w="100%" maxW="1200px" textAlign="center">
+                            <Text fontWeight="bold" mb={2} fontSize="lg">
+                                🎥 Demo Video
+                            </Text>
+                            <Link 
+                                href="https://youtu.be/3Oihz5XFWpw" 
+                                isExternal 
+                                color="red.600"
+                                fontWeight="semibold"
+                                _hover={{ color: 'red.700', textDecoration: 'underline' }}
+                            >
+                                <Icon as={FaYoutube} mr={2} boxSize={5} />
+                                Watch Full Demo & Tutorial on YouTube
+                            </Link>
                         </Box>
                     </VStack>
                 </Container>

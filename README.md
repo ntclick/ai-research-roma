@@ -16,6 +16,14 @@ An advanced cryptocurrency research assistant powered by the ROMA (Recursive Ope
 
 **Status:** ✅ **LIVE & OPERATIONAL**
 
+## 🎥 Demo Video
+
+Watch the full demo and tutorial:
+
+[![Demo Video](https://img.youtube.com/vi/3Oihz5XFWpw/maxresdefault.jpg)](https://youtu.be/3Oihz5XFWpw)
+
+**[▶️ Watch on YouTube](https://youtu.be/3Oihz5XFWpw)**
+
 ---
 
 ## ✨ Key Features
