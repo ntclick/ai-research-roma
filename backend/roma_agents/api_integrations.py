@@ -54,12 +54,17 @@ Available APIs:
 5. rss_news - For latest news: "news", "tin tức"
 
 ROUTING RULES (in priority order):
-1. X/Twitter URLs ("x.com", "twitter.com", "analyze tweet"): → twitter_analysis
-2. Questions/definitions ("what is", "explain"): → perplexity
-3. Specific price queries ("btc price", "check price"): → coingecko
-4. News requests ("news", "updates"): → rss_news
-5. Image generation ("create image", "generate image"): → falai
-6. Vague queries: → ask_user
+1. X/Twitter URLs ("x.com", "twitter.com"): → twitter_analysis
+2. Price queries ("price", "check", "value", single coin ticker like "btc", "eth"): → coingecko
+3. News requests ("news", "updates", "latest"): → rss_news
+4. Questions/definitions ("what is", "explain", "how"): → perplexity
+5. Image generation ("create image", "generate"): → falai
+6. Vague/unclear queries: → ask_user
+
+IMPORTANT: 
+- "check [coin]" → coingecko (e.g., "check btc", "check eth")
+- Single tickers → coingecko (e.g., "btc", "eth", "sol")
+- Coin + "news" → rss_news (e.g., "btc news")
 
 RESPONSE LANGUAGE:
 - ALWAYS respond in English (never Vietnamese)
@@ -74,11 +79,13 @@ Return ONLY JSON:
 
 Examples:
 - "https://x.com/user/status/123" → {"selected_api": "twitter_analysis", "reason": "X/Twitter URL", "confidence": 0.95}
-- "analyze tweet x.com/..." → {"selected_api": "twitter_analysis", "reason": "Tweet analysis", "confidence": 0.9}
 - "bitcoin price" → {"selected_api": "coingecko", "reason": "Price query", "confidence": 0.95}
-- "coin là gì" → {"selected_api": "perplexity", "reason": "Definition needed", "confidence": 0.9}
+- "check btc" → {"selected_api": "coingecko", "reason": "Check price", "confidence": 0.95}
+- "btc" → {"selected_api": "coingecko", "reason": "Quick price check", "confidence": 0.9}
+- "eth market cap" → {"selected_api": "coingecko", "reason": "Market data query", "confidence": 0.9}
+- "what is ethereum" → {"selected_api": "perplexity", "reason": "Definition needed", "confidence": 0.9}
 - "btc news" → {"selected_api": "rss_news", "reason": "Latest news", "confidence": 0.9}
-- "create image btc" → {"selected_api": "falai", "reason": "Image generation", "confidence": 0.9}"""
+- "create image bitcoin" → {"selected_api": "falai", "reason": "Image generation", "confidence": 0.9}"""
         
         payload = {
             "model": "gpt-4o-mini",
