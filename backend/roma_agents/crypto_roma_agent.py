@@ -245,25 +245,24 @@ Return ONLY the JSON array, no explanation."""
                 }
         
         elif selected_api == 'perplexity':
-            # Worker: Gemini trả lời câu đơn giản (with OpenAI backup)
+            # Worker: Gemini answers simple questions (with OpenAI backup)
             try:
                 print(f"[WORKER] Trying Gemini for simple answer...")
                 
-                # Use Gemini for concise answers
-                research_prompt = f"""Trả lời câu hỏi sau BẰNG NGÔN NGỮ của câu hỏi: {query}
+                # Use Gemini for concise answers - ALWAYS in English
+                research_prompt = f"""Answer this question in English: {query}
 
-YÊU CẦU:
-- Tiếng Việt → trả lời tiếng Việt
-- English → answer in English  
-- CHỈ 2-3 câu ngắn gọn
-- Tập trung vào điểm chính
+REQUIREMENTS:
+- ALWAYS respond in English (never Vietnamese)
+- Keep it concise: 2-3 sentences
+- Focus on key points only
 
-Ví dụ:
-"coin là gì" → "Coin (tiền điện tử) là đơn vị tiền tệ số chạy trên blockchain riêng. Ví dụ: Bitcoin, Ethereum, Solana."
-
+Examples:
 "what is ethereum" → "Ethereum is a blockchain platform that enables smart contracts and dApps. It uses ETH as its native cryptocurrency."
 
-Trả lời:"""
+"what is bitcoin" → "Bitcoin is the first and largest cryptocurrency, created in 2009. It operates on a decentralized blockchain network without central authority."
+
+Answer:"""
                 
                 import google.generativeai as genai
                 genai.configure(api_key=self.api_integrations.gemini_api_key)

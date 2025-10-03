@@ -55,21 +55,21 @@ Available APIs:
 
 ROUTING RULES (in priority order):
 1. X/Twitter URLs ("x.com", "twitter.com", "analyze tweet"): → twitter_analysis
-2. Questions/definitions ("what is", "coin là gì", "explain"): → perplexity
-3. Specific price queries ("btc price", "giá btc"): → coingecko
-4. News requests ("news", "tin tức"): → rss_news
-5. Image generation ("create image", "tạo hình"): → falai
+2. Questions/definitions ("what is", "explain"): → perplexity
+3. Specific price queries ("btc price", "check price"): → coingecko
+4. News requests ("news", "updates"): → rss_news
+5. Image generation ("create image", "generate image"): → falai
 6. Vague queries: → ask_user
 
 RESPONSE LANGUAGE:
-- Match user's language (Vietnamese/English)
+- ALWAYS respond in English (never Vietnamese)
 
 Return ONLY JSON:
 {
     "selected_api": "coingecko|perplexity|falai|rss_news|twitter_analysis|ask_user",
     "reason": "Why this API",
     "confidence": 0.0-1.0,
-    "clarification": "For ask_user only, in user's language"
+    "clarification": "For ask_user only, IN ENGLISH"
 }
 
 Examples:
@@ -558,7 +558,7 @@ Provide concise analysis in 3-4 sentences covering:
 - Credibility assessment
 - Key takeaways
 
-Respond in the same language as the URL context (Vietnamese if from Vietnamese user, English otherwise).
+ALWAYS respond in English.
 
 Note: Since I cannot directly access X/Twitter, provide general analysis guidance for posts about crypto."""
                 
