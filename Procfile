@@ -1,2 +1,2 @@
-web: cd backend && python websocket_server.py
+web: python backend/websocket_server.py
 

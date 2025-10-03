@@ -12,6 +12,7 @@ langchain-anthropic
 tavily-python
 openai>=1.0.0
 anthropic>=0.18.0
+google-generativeai>=0.3.0
 
 # Image Generation
 fal-client>=0.4.0
