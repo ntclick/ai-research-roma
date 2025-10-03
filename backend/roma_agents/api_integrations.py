@@ -14,7 +14,7 @@ class APIIntegrations:
         self.coingecko_api_key = os.getenv('COINGECKO_API_KEY')
         self.perplexity_api_key = os.getenv('PERPLEXITY_API_KEY')
         self.fal_api_key = os.getenv('FAL_API_KEY')
-        self.gemini_api_key = os.getenv('GEMINI_API_KEY')
+        self.gemini_api_key = os.getenv('GOOGLE_API_KEY')  # Railway uses GOOGLE_API_KEY
         
         print("============================================================")
         print("[ROMA Framework - AI Architecture]")
