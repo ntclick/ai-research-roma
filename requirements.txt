@@ -1,0 +1,23 @@
+# WebSocket Server
+websockets>=12.0
+aiohttp>=3.9.0
+
+# ROMA Framework (install separately - see ROMA_SETUP.md)
+# sentientresearchagent  # Install from: https://github.com/sentient-agi/ROMA
+
+# AI & LLM (for ROMA)
+langchain>=0.1.0
+langchain-openai
+langchain-anthropic
+tavily-python
+openai>=1.0.0
+anthropic>=0.18.0
+
+# Image Generation
+fal-client>=0.4.0
+
+# Utilities
+python-dotenv>=1.0.0
+feedparser>=6.0.0
+python-dateutil>=2.8.0
+
