@@ -50,9 +50,11 @@ print("="*60)
 USE_ROMA = True
 
 class ResearchWebSocketServer:
-    def __init__(self, host='localhost', port=5001):
-        self.host = host
-        self.port = port
+    def __init__(self, host=None, port=None):
+        # Railway provides PORT env variable, defaults to 5001 for local dev
+        self.host = host or os.getenv('HOST', '0.0.0.0')
+        self.port = port or int(os.getenv('PORT', 5001))
+        print(f"[CONFIG] Server will bind to {self.host}:{self.port}")
         self.conversation_history = {}  # Track conversation per client
         
         # Initialize ROMA Agent or fallback to API Integrations
