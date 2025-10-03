@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Crypto Research App powered by AI and ROMA Framework"
+    />
+    <title>Crypto Research AI</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+    <!-- Suppress MetaMask errors -->
+    <script>
+      // Block MetaMask extension errors
+      window.addEventListener('error', function(e) {
+        if (e.message && (e.message.includes('MetaMask') || e.message.includes('ethereum'))) {
+          e.preventDefault();
+          e.stopPropagation();
+          return true;
+        }
+      }, true);
+      
+      // Block unhandled promise rejections from MetaMask
+      window.addEventListener('unhandledrejection', function(e) {
+        if (e.reason && e.reason.message && e.reason.message.includes('MetaMask')) {
+          e.preventDefault();
+          e.stopPropagation();
+          return true;
+        }
+      }, true);
+      
+      // Prevent MetaMask auto-detection
+      if (window.ethereum) {
+        window.ethereum.autoRefreshOnNetworkChange = false;
+      }
+    </script>
+  </body>
+</html>
+
