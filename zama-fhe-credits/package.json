@@ -1,0 +1,30 @@
+{
+  "name": "zama-fhe-credits",
+  "version": "1.0.0",
+  "description": "AI Research Credits System with Zama FHE",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network zama",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "node": "hardhat node",
+    "balance": "hardhat run scripts/check-balance.js --network zama",
+    "export-abi": "node scripts/export-abi.js",
+    "clean": "hardhat clean",
+    "verify": "hardhat verify --network zama"
+  },
+  "keywords": ["zama", "fhe", "fhevm", "encryption", "ai-research"],
+  "author": "@trungkts29",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0"
+  },
+  "dependencies": {
+    "@fhevm/hardhat-plugin": "^0.1.0",
+    "fhevm": "^0.5.0",
+    "fhevmjs": "^0.5.0",
+    "dotenv": "^16.4.5"
+  }
+}
